@@ -1,8 +1,10 @@
-import React, { useState} from 'react'
+import React from 'react'
 import { Outlet , Navigate} from 'react-router-dom'
+import { useStateContext } from '../contexts/ContextProvider.jsx'
+
 
 export default function DefaultLayout() {
-    const {user, token} = useState()
+    const {user, token} = useStateContext()
 
     if (!token){ 
 
